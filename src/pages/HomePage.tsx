@@ -1,6 +1,7 @@
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Button, Icon} from 'react-native-elements';
+import {Button} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const HomePage = () => {
   return (
@@ -22,6 +23,13 @@ const HomePage = () => {
           onPress={() => console.log('Button Clicked')}
         />
         <Icon name="home" color="#fff" style={styles.homeIconStyle} />
+      </View>
+
+      <View>
+        <Icon name="delete" size={50} />
+        <Icon name="toggle-on" size={50} />
+        <Icon name="delete" size={50} />
+        <Icon name="delete" size={50} />
       </View>
     </SafeAreaView>
   );
