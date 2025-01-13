@@ -1,11 +1,16 @@
 import {View, StyleSheet} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import HomePage from './src/pages/HomePage';
+import Splashscreen from './src/pages/static/Splashscreen';
 
 const App = () => {
+  const [loaded, setLoaded] = useState(false);
+  setTimeout(() => {
+    setLoaded(true);
+  }, 2000);
   return (
     <View style={styles.container}>
-      <HomePage />
+      {loaded ? <HomePage /> : <Splashscreen />}
     </View>
   );
 };

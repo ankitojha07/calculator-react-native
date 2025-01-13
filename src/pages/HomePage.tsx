@@ -1,7 +1,8 @@
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Button} from 'react-native-elements';
+import {Button, Image} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import logo from '../../assets/images/logo.png';
 
 const HomePage = () => {
   return (
@@ -30,6 +31,7 @@ const HomePage = () => {
         <Icon name="toggle-on" size={50} />
         <Icon name="delete" size={50} />
         <Icon name="delete" size={50} />
+        <Image source={logo} style={styles.logoStyle} />
       </View>
     </SafeAreaView>
   );
@@ -68,5 +70,9 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  logoStyle: {
+    width: 400,
+    height: 400,
   },
 });
