@@ -1,6 +1,8 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Button} from 'react-native-elements';
+import {addToCart} from '../../redux/action';
+import {useDispatch} from 'react-redux';
 
 interface productProps {
   name: string;
@@ -10,6 +12,14 @@ interface productProps {
 }
 
 const Products = ({name, price, color, image}: productProps) => {
+  const item = {name, price, color, image};
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product: productProps) => {
+    console.warn('Add to cart', product);
+    dispatch(addToCart(product));
+  };
+
   return (
     <View style={styles.card}>
       <Text style={styles.textStyle}>{name}</Text>
@@ -20,7 +30,13 @@ const Products = ({name, price, color, image}: productProps) => {
         </View>
         <Image style={styles.imageStyle} source={{uri: image}} />
       </View>
-      <Button title="Add to cart" style={styles.button} />
+      <Button
+        title="Add to cart"
+        style={styles.button}
+        onPress={() => {
+          handleAddToCart(item);
+        }}
+      />
     </View>
   );
 };
