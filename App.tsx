@@ -1,7 +1,8 @@
 import {View, StyleSheet} from 'react-native';
 import React, {useState} from 'react';
-import HomePage from './src/pages/HomePage';
+// import HomePage from './src/pages/HomePage';
 import Splashscreen from './src/pages/static/Splashscreen';
+import ShopPage from './src/pages/CartApp/ShopPage';
 
 const App = () => {
   const [loaded, setLoaded] = useState(false);
@@ -10,7 +11,7 @@ const App = () => {
   }, 2000);
   return (
     <View style={styles.container}>
-      {loaded ? <HomePage /> : <Splashscreen />}
+      {loaded ? <ShopPage /> : <Splashscreen />}
     </View>
   );
 };

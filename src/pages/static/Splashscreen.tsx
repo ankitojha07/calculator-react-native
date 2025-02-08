@@ -7,7 +7,7 @@ import styles from '../../Stylesheets/Mainstyle.tsx';
 const Splashscreen = () => {
   return (
     <View style={styles.container}>
-      <Image source={logo} style={styles.logoStyle} />dded
+      <Image source={logo} style={styles.logoStyle} />
     </View>
   );
 };
