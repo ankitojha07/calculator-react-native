@@ -3,48 +3,53 @@ import React from 'react';
 import Header from '../../components/CartComponents/Header';
 import Products from '../../components/CartComponents/Products';
 
+import samsungImage from '../../../assets/images/products/samsung-mobile.jpeg';
+import oneplus from '../../../assets/images/products/iphone.jpg';
+import iphone from '../../../assets/images/products/iphone.jpg';
+import iphone2 from '../../../assets/images/products/iphone-2.jpg';
+
 const ShopPage = () => {
   const product = [
     {
       name: 'Samsung Mobile',
       price: 3000,
       color: 'Blue',
-      image: 'https://placebear.com/250/250',
+      image: samsungImage,
       desc: 'lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veniam possimus maiores repellendus quaerat iste exercitationem! Necessitatibus fuga sapiente non',
     },
     {
       name: 'Apple iPhone',
       price: 3000,
       color: 'Blue',
-      image: 'https://placebear.com/250/250',
+      image: oneplus,
       desc: 'lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veniam possimus maiores repellendus quaerat iste exercitationem! Necessitatibus fuga sapiente non',
     },
     {
       name: 'Nokia',
       price: 3000,
       color: 'Blue',
-      image: 'https://placebear.com/250/250',
+      image: iphone2,
       desc: 'lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veniam possimus maiores repellendus quaerat iste exercitationem! Necessitatibus fuga sapiente non',
     },
     {
       name: 'One PLus',
       price: 3000,
       color: 'Blue',
-      image: 'https://placebear.com/250/250',
+      image: iphone,
       desc: 'lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veniam possimus maiores repellendus quaerat iste exercitationem! Necessitatibus fuga sapiente non',
     },
     {
       name: 'One PLus',
       price: 3000,
       color: 'Blue',
-      image: 'https://placebear.com/250/250',
+      image: samsungImage,
       desc: 'lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veniam possimus maiores repellendus quaerat iste exercitationem! Necessitatibus fuga sapiente non',
     },
     {
       name: 'One PLus',
       price: 3000,
       color: 'Blue',
-      image: 'https://placebear.com/250/250',
+      image: samsungImage,
       desc: 'lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veniam possimus maiores repellendus quaerat iste exercitationem! Necessitatibus fuga sapiente non',
     },
   ];
@@ -70,17 +75,3 @@ const ShopPage = () => {
 };
 
 export default ShopPage;
-
-// const styles = StyleSheet.create({
-//   container: {
-//     padding: 0,
-//     display: 'flex',
-//     flexDirection: 'column',
-//     gap: 10,
-//   },
-//   cardContainer: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     gap: 14,
-//   },
-// });

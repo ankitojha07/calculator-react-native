@@ -4,11 +4,13 @@ import {Button} from 'react-native-elements';
 import {addToCart} from '../../redux/action';
 import {useDispatch} from 'react-redux';
 
+// import samsungImage from '../../../assets/images/products/samsung-mobile.jpeg';
+
 interface productProps {
   name: string;
   price: number;
   color: string;
-  image: string;
+  image: any;
   desc: string;
 }
 
@@ -30,12 +32,7 @@ const Products = ({name, price, color, image, desc}: productProps) => {
           <Text className="text-lg font-semibold">Price: {price}</Text>
           <Text className="text-md">Color: {color}</Text>
         </View>
-        <Image
-          height={200}
-          width={200}
-          source={{uri: image}}
-          className="rounded-3xl"
-        />
+        <Image source={image} className="rounded-3xl h-56 w-52" />
       </View>
       <Button
         title="Add to cart"
@@ -49,33 +46,3 @@ const Products = ({name, price, color, image, desc}: productProps) => {
 };
 
 export default Products;
-
-// const styles = StyleSheet.create({
-//   card: {
-//     borderWidth: 2,
-//     padding: 4,
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     width: '100%',
-//   },
-//   textStyle: {
-//     fontSize: 24,
-//   },
-//   button: {
-//     borderRadius: 34,
-//     width: '100%',
-//   },
-//   imageStyle: {
-//     height: 100,
-//     width: 100,
-//   },
-//   columnView: {
-//     width: '100%',
-//     display: 'flex',
-//     justifyContent: 'space-between',
-//     alignItems: 'center',
-//     flexDirection: 'row',
-//     gap: 14,
-//   },
-// });
