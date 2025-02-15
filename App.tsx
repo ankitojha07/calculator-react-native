@@ -1,3 +1,4 @@
+import './global.css';
 import {View, StyleSheet} from 'react-native';
 import React, {useState} from 'react';
 // import HomePage from './src/pages/HomePage';
